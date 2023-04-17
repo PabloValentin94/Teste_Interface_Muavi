@@ -1,0 +1,7 @@
+2A 26 2E hover submenu
+23 20 27 Submenu
+18 16 22 hover
+17 15 20 player and click
+20 1E 2D chlidform
+0B 07 11 vertical menu
+EB 2A 53 primary
