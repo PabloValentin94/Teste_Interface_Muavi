@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace Teste_Interface_Muavi.View
 {
-    public partial class Principal : Form
+
+    public partial class frm_principal : Form
     {
-        public Principal()
+
+        public frm_principal()
         {
 
             InitializeComponent();
+
+            this.Size = this.MinimumSize;
+
+            //pctbox_logo_centro.ImageLocation = "C:\\Users\\Evandro\\Desktop\\Teste_Interface_Muavi\\Teste_Interface_Muavi\\View\\Assets\\Images\\Logos\\main_logo.png";
 
         }
 
@@ -72,13 +78,6 @@ namespace Teste_Interface_Muavi.View
 
         }
 
-        private void btn_equalizador_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
-
         private void btn_ferramentas_Click(object sender, EventArgs e)
         {
 
@@ -86,10 +85,26 @@ namespace Teste_Interface_Muavi.View
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_form_externo_Click(object sender, EventArgs e)
         {
 
             Fechar_Submenus();
+
+            Abrir_Form_Externo(new View.frm_externo());
+
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+
+            Fechar_Submenus();
+
+            if(MessageBox.Show("Realmente deseja fechar este formulário?", "Aviso!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+                this.Close();
+
+            }
 
         }
 
@@ -105,7 +120,21 @@ namespace Teste_Interface_Muavi.View
 
             }
 
-            form_externo.Show(formulario);
+            form_externo = formulario;
+
+            form_externo.TopLevel = false;
+
+            form_externo.FormBorderStyle = FormBorderStyle.None;
+
+            form_externo.Dock = DockStyle.Fill;
+
+            pn_form_externo.Controls.Add(form_externo);
+
+            pn_form_externo.Tag = form_externo;
+
+            form_externo.BringToFront();
+
+            form_externo.Show();
 
         }
 

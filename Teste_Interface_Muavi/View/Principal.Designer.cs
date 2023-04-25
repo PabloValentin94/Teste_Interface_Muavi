@@ -1,6 +1,6 @@
 ﻿namespace Teste_Interface_Muavi.View
 {
-    partial class Principal
+    partial class frm_principal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pn_sidebar = new System.Windows.Forms.Panel();
+            this.btn_sair = new System.Windows.Forms.Button();
             this.btn_ajuda = new System.Windows.Forms.Button();
             this.pn_menu_ferramentas = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
@@ -48,16 +50,21 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_form_externo = new System.Windows.Forms.Button();
             this.btn_midia = new System.Windows.Forms.Button();
             this.pn_logo = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_form_externo = new System.Windows.Forms.Panel();
+            this.pctbox_logo_centro = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pn_sidebar.SuspendLayout();
             this.pn_menu_ferramentas.SuspendLayout();
             this.pn_menu_playlist.SuspendLayout();
             this.pn_menu_midia.SuspendLayout();
+            this.pn_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pn_form_externo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbox_logo_centro)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +81,8 @@
             // pn_sidebar
             // 
             this.pn_sidebar.AutoScroll = true;
-            this.pn_sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
+            this.pn_sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pn_sidebar.Controls.Add(this.btn_sair);
             this.pn_sidebar.Controls.Add(this.btn_ajuda);
             this.pn_sidebar.Controls.Add(this.pn_menu_ferramentas);
             this.pn_sidebar.Controls.Add(this.btn_ferramentas);
@@ -84,14 +92,32 @@
             this.pn_sidebar.Controls.Add(this.pn_menu_midia);
             this.pn_sidebar.Controls.Add(this.btn_midia);
             this.pn_sidebar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_sidebar.Location = new System.Drawing.Point(0, 129);
+            this.pn_sidebar.Location = new System.Drawing.Point(0, 99);
             this.pn_sidebar.Name = "pn_sidebar";
-            this.pn_sidebar.Size = new System.Drawing.Size(250, 432);
+            this.pn_sidebar.Size = new System.Drawing.Size(250, 462);
             this.pn_sidebar.TabIndex = 1;
+            // 
+            // btn_sair
+            // 
+            this.btn_sair.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_sair.FlatAppearance.BorderSize = 0;
+            this.btn_sair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sair.ForeColor = System.Drawing.Color.White;
+            this.btn_sair.Location = new System.Drawing.Point(0, 767);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_sair.Size = new System.Drawing.Size(233, 50);
+            this.btn_sair.TabIndex = 1;
+            this.btn_sair.Text = "Sair";
+            this.btn_sair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             // 
             // btn_ajuda
             // 
             this.btn_ajuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_ajuda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ajuda.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ajuda.FlatAppearance.BorderSize = 0;
             this.btn_ajuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -186,6 +212,7 @@
             // btn_ferramentas
             // 
             this.btn_ferramentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_ferramentas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ferramentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ferramentas.FlatAppearance.BorderSize = 0;
             this.btn_ferramentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -204,6 +231,7 @@
             // btn_equalizador
             // 
             this.btn_equalizador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_equalizador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_equalizador.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_equalizador.FlatAppearance.BorderSize = 0;
             this.btn_equalizador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -217,7 +245,6 @@
             this.btn_equalizador.Text = "Equalizador";
             this.btn_equalizador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_equalizador.UseVisualStyleBackColor = false;
-            this.btn_equalizador.Click += new System.EventHandler(this.btn_equalizador_Click);
             // 
             // pn_menu_playlist
             // 
@@ -299,6 +326,7 @@
             // btn_playlist
             // 
             this.btn_playlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_playlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_playlist.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_playlist.FlatAppearance.BorderSize = 0;
             this.btn_playlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -320,7 +348,7 @@
             this.pn_menu_midia.Controls.Add(this.button4);
             this.pn_menu_midia.Controls.Add(this.button3);
             this.pn_menu_midia.Controls.Add(this.button2);
-            this.pn_menu_midia.Controls.Add(this.button1);
+            this.pn_menu_midia.Controls.Add(this.btn_form_externo);
             this.pn_menu_midia.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_menu_midia.Location = new System.Drawing.Point(0, 50);
             this.pn_menu_midia.Name = "pn_menu_midia";
@@ -375,26 +403,28 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_form_externo
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(233, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_form_externo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_form_externo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_form_externo.FlatAppearance.BorderSize = 0;
+            this.btn_form_externo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btn_form_externo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_form_externo.ForeColor = System.Drawing.Color.White;
+            this.btn_form_externo.Location = new System.Drawing.Point(0, 0);
+            this.btn_form_externo.Name = "btn_form_externo";
+            this.btn_form_externo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_form_externo.Size = new System.Drawing.Size(233, 40);
+            this.btn_form_externo.TabIndex = 1;
+            this.btn_form_externo.Text = "Abrir";
+            this.btn_form_externo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_form_externo.UseVisualStyleBackColor = true;
+            this.btn_form_externo.Click += new System.EventHandler(this.btn_form_externo_Click);
             // 
             // btn_midia
             // 
             this.btn_midia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_midia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_midia.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_midia.FlatAppearance.BorderSize = 0;
             this.btn_midia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
@@ -413,41 +443,56 @@
             // pn_logo
             // 
             this.pn_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pn_logo.Controls.Add(this.pictureBox1);
             this.pn_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_logo.Location = new System.Drawing.Point(0, 0);
             this.pn_logo.Name = "pn_logo";
-            this.pn_logo.Size = new System.Drawing.Size(250, 129);
+            this.pn_logo.Size = new System.Drawing.Size(250, 99);
             this.pn_logo.TabIndex = 1;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(250, 441);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(684, 120);
-            this.panel2.TabIndex = 1;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(238, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pn_form_externo
             // 
             this.pn_form_externo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.pn_form_externo.Controls.Add(this.pctbox_logo_centro);
             this.pn_form_externo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_form_externo.Location = new System.Drawing.Point(250, 0);
             this.pn_form_externo.Name = "pn_form_externo";
-            this.pn_form_externo.Size = new System.Drawing.Size(684, 441);
+            this.pn_form_externo.Size = new System.Drawing.Size(684, 561);
             this.pn_form_externo.TabIndex = 2;
             // 
-            // Principal
+            // pctbox_logo_centro
+            // 
+            this.pctbox_logo_centro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pctbox_logo_centro.Image = ((System.Drawing.Image)(resources.GetObject("pctbox_logo_centro.Image")));
+            this.pctbox_logo_centro.Location = new System.Drawing.Point(234, 181);
+            this.pctbox_logo_centro.Name = "pctbox_logo_centro";
+            this.pctbox_logo_centro.Size = new System.Drawing.Size(226, 218);
+            this.pctbox_logo_centro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctbox_logo_centro.TabIndex = 0;
+            this.pctbox_logo_centro.TabStop = false;
+            // 
+            // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 561);
             this.Controls.Add(this.pn_form_externo);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Principal";
+            this.Name = "frm_principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel1.ResumeLayout(false);
@@ -455,6 +500,12 @@
             this.pn_menu_ferramentas.ResumeLayout(false);
             this.pn_menu_playlist.ResumeLayout(false);
             this.pn_menu_midia.ResumeLayout(false);
+            this.pn_logo.ResumeLayout(false);
+            this.pn_logo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pn_form_externo.ResumeLayout(false);
+            this.pn_form_externo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbox_logo_centro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,8 +520,7 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
-        private Button btn_ajuda;
+        private Button btn_form_externo;
         private Panel pn_menu_ferramentas;
         private Button button12;
         private Button button13;
@@ -484,7 +534,10 @@
         private Button button8;
         private Button button9;
         private Button btn_playlist;
-        private Panel panel2;
         private Panel pn_form_externo;
+        private Button btn_ajuda;
+        private PictureBox pctbox_logo_centro;
+        private Button btn_sair;
+        private PictureBox pictureBox1;
     }
 }

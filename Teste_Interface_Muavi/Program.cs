@@ -11,7 +11,7 @@ namespace Teste_Interface_Muavi
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new View.Principal());
+            Application.Run(new View.frm_principal());
         }
     }
 }
